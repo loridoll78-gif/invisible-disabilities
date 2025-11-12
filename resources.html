@@ -249,6 +249,17 @@
             <p style="margin-top: 1rem;"><strong>Crisis Text Line:</strong> Text HOME to 741741</p>
             <p><strong>SAMHSA National Helpline:</strong> 1-800-662-4357 (treatment referral)</p>
         </div>
+		<div id="categoryFilters">
+  <button onclick="filterCategory('crisis')">Crisis</button>
+  <button onclick="filterCategory('financial')">Financial</button>
+  <button onclick="filterCategory('support')">Support</button>
+  <button onclick="filterCategory('education')">Education</button>
+  <button onclick="filterCategory('all')">Show All</button>
+</div>
+
+<input type="text" id="searchInput" placeholder="Search Resources">
+
+
 
         <div class="resource-categories">
             
@@ -620,13 +631,5 @@ document.addEventListener("DOMContentLoaded", function() {
   filterCategory('all');
 });
 </script>
-
-
-
-
-
-
-
-
 </body>
 </html>
