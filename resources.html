@@ -40,6 +40,28 @@
     </style>
 </head>
 <body>
+<!-- Category Filter Buttons -->
+<div id="categoryFilters">
+  <p>🌙 Choose a category to explore:</p>
+  <button onclick="filterCategory('crisis')">Crisis</button>
+  <button onclick="filterCategory('financial')">Financial Aid</button>
+  <button onclick="filterCategory('support')">Support Groups</button>
+  <button onclick="filterCategory('education')">Education</button>
+  <button onclick="filterCategory('all')">Show All</button>
+</div>
+
+<!-- Search Bar -->
+<input type="text" id="searchInput" placeholder="Search Resources">
+
+<!-- Resource List -->
+<ul id="resourceList">
+  <li class="resource crisis">988 – <a href="https://988lifeline.org">National Suicide Prevention Lifeline</a></li>
+  <li class="resource financial">💰 <a href="https://www.ssa.gov/ssi/">SSI Benefits Guide</a></li>
+  <li class="resource support">🧩 <a href="https://www.autismsupportnetwork.com">Autism Support Network</a></li>
+  <li class="resource education">📘 <a href="https://invisibledisabilities.org">Invisible Disabilities Association Toolkit</a></li>
+</ul>
+
+
     <header>
         <nav>
             <div class="logo">Understanding Invisible Disabilities</div>
@@ -420,5 +442,28 @@
             });
         }
     </script>
+	<script>
+  function filterCategory(category) {
+    const items = document.querySelectorAll(".resource");
+    items.forEach(item => {
+      if (category === 'all' || item.classList.contains(category)) {
+        item.style.display = '';
+      } else {
+        item.style.display = 'none';
+      }
+    });
+  }
+
+  const input = document.getElementById("searchInput");
+  input.addEventListener("keyup", function() {
+    const filter = input.value.toLowerCase();
+    const items = document.querySelectorAll("#resourceList li");
+    items.forEach(item => {
+      item.style.display = item.textContent.toLowerCase().includes(filter) ? "" : "none";
+    });
+  });
+</script>
+
+
 </body>
 </html>
