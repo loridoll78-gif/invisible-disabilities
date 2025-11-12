@@ -24,8 +24,10 @@
   border-radius: 12px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
-        .page-hero h1 { font-size: 2.5rem; color: white; margin-bottom: 1rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.2); }
-        .page-hero p { font-size: 1.2rem; color: white; max-width: 800px; margin: 0 auto; }
+        .page-hero h1 { font-size: 2.5rem; color: #2c2c2c; ... }
+.page-hero p { font-size: 1.2rem; color: #4a3c2f; ... }
+
+
         .search-box { max-width: 600px; margin: 2rem auto; background: white; padding: 1rem; border-radius: 50px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); display: flex; align-items: center; }
         .search-box input { flex: 1; border: none; outline: none; font-size: 1rem; padding: 0.5rem 1rem; }
         .resource-categories { display: grid; gap: 2rem; }
@@ -34,18 +36,24 @@
         .resource-category { margin-bottom: 2rem; }
         .resource-category:last-child { margin-bottom: 0; }
         .resource-category h3 { color: #2c3e50; font-size: 1.3rem; margin-bottom: 1rem; }
-        .resource-item { background: #f7fafc; padding: 1.2rem; border-radius: 10px; margin-bottom: 1rem; border-left: 4px solid #667eea; transition: transform 0.2s, box-shadow 0.2s; }
+        .resource-item {
+  background: #f7fafc;
+  padding: 1.2rem;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  border-left: 4px solid #667eea;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.6s ease, transform 0.6s ease, box-shadow 0.2s;
+}
+
+
         .resource-item:hover { transform: translateX(5px); box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
         .resource-item h4 { color: #667eea; margin-bottom: 0.5rem; font-size: 1.1rem; }
         .resource-item a { color: #667eea; text-decoration: none; font-weight: 600; }
         .resource-item a:hover { text-decoration: underline; }
         .resource-item p { color: #4a5568; font-size: 0.95rem; margin-top: 0.5rem; }
 		/* Fade In Animation */
-.resource-item {
-  opacity: 0;
-  transform: translateY(10px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
-}
 
 /* When shown */
 .resource-item.show {
