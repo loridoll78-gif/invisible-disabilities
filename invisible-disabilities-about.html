@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Understanding Invisible Disabilities</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.8;
+            color: #2c3e50;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1.5rem 0;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #4a5568;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #667eea;
+        }
+
+        .about-hero {
+            max-width: 900px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+            text-align: center;
+        }
+
+        .about-hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            background: white;
+            color: #2c3e50;
+            padding: 1rem;
+            border-radius: 10px;
+            display: inline-block;
+        }
+
+        .about-hero .subtitle {
+            font-size: 1.3rem;
+            font-style: italic;
+            color: white;
+            margin-bottom: 2rem;
+        }
+
+        .content-section {
+            max-width: 900px;
+            margin: 2rem auto;
+            background: white;
+            border-radius: 20px;
+            padding: 3rem;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+
+        .story-section {
+            margin-bottom: 3rem;
+        }
+
+        .story-section h2 {
+            color: #667eea;
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid #667eea;
+        }
+
+        .story-section p {
+            margin-bottom: 1.2rem;
+            color: #4a5568;
+            font-size: 1.1rem;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+        }
+
+        .highlight-box p {
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .highlight-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        .quote {
+            font-style: italic;
+            font-size: 1.2rem;
+            color: #667eea;
+            padding: 1.5rem;
+            border-left: 4px solid #667eea;
+            background: #f7fafc;
+            margin: 2rem 0;
+            border-radius: 0 10px 10px 0;
+        }
+
+        .divider {
+            text-align: center;
+            margin: 3rem 0;
+            color: #cbd5e0;
+            font-size: 2rem;
+        }
+
+        .signature {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 2px solid #e2e8f0;
+        }
+
+        .signature p {
+            font-style: italic;
+            color: #667eea;
+            font-size: 1.1rem;
+        }
+
+        .signature .name {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-top: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        footer {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 2rem;
+            text-align: center;
+            margin-top: 4rem;
+            color: #4a5568;
+        }
+
+        @media (max-width: 768px) {
+            .about-hero h1 {
+                font-size: 2rem;
+            }
+
+            .content-section {
+                padding: 2rem 1.5rem;
+            }
+
+            .story-section h2 {
+                font-size: 1.5rem;
+            }
+
+            .story-section p, .quote {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Understanding Invisible Disabilities</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+				<li><a href="educational.html">Learn</a></li> 
+                <li><a href="conditions.html">Conditions</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="about-hero">
+            <h1>Finding Light in the Invisible Darkness</h1>
+            <p class="subtitle">My Journey from Isolation to Advocacy</p>
+        </section>
+<div style="max-width: 900px; margin: 2rem auto; padding: 2rem; background: #fff3cd; border-left: 4px solid #ffc107; border-radius: 10px;">
+    <h3 style="color: #856404; margin-bottom: 1rem;">⚠️ Important Disclaimer</h3>
+    <p style="color: #856404; line-height: 1.8; margin-bottom: 0.5rem;">
+        This resource is for educational and informational purposes only. The content is based on personal experiences, research, and community insights about invisible disabilities. It is not intended as medical advice, diagnosis, or treatment recommendations.
+    </p>
+    <p style="color: #856404; line-height: 1.8; margin-bottom: 0.5rem;">
+        Always consult with qualified healthcare professionals regarding medical concerns, symptoms, or treatment decisions. The author is not a medical professional and encourages readers to work with their healthcare providers for personalized medical care.
+    </p>
+    <p style="color: #856404; line-height: 1.8; margin-bottom: 0;">
+        The experiences shared may not reflect everyone's experience with these conditions. Individual experiences with invisible disabilities vary greatly.
+    </p>
+</div>
+
+
+        <article class="content-section">
+            <div class="story-section">
+                <div class="quote">
+                    "Maybe I'm just not meant for this world. The anxiety and fear are crippling and I don't see situations getting better anytime soon."
+                </div>
+
+                <p>Four years ago, I wrote those words in a moment of desperate vulnerability. I was drowning in the isolation that comes with invisible struggles—both my own and those of my husband, who lives with severe agoraphobia and mental illness.</p>
+
+                <p>As his full-time caregiver, I had made the choice to stay home and care for him, living on his small Social Security disability income and navigating a system that doesn't recognize or compensate the vital work of spousal caregivers. We survived month to month with the help of Section 8 housing, food stamps, and the support of those who understood our situation. But beyond the financial stress was something even more crushing: the weight of invisible suffering that no one could see or understand.</p>
+
+                <p>I watched my husband battle severe agoraphobia and mounting physical health issues daily—a combination that made leaving our home feel like facing impossible obstacles. To the outside world, he might look like someone who was simply choosing not to participate in life. But I witnessed the very real terror of his anxiety, the physical pain that compounded his mental struggles, and the exhaustion that comes from fighting both your mind and body every single day. I saw how people misunderstood his conditions, dismissed them, or worse—suggested he just "get over it" or "try harder."</p>
+            </div>
+
+            <div class="divider">• • •</div>
+
+            <div class="story-section">
+                <h2>My Own Invisible Battle</h2>
+
+                <p>What I didn't fully understand during those darkest days was that I was fighting my own invisible battle. For years, I'd been experiencing chronic pain, fatigue, and symptoms I couldn't quite explain—dismissing them as stress from caregiving or just "getting older." It wasn't until recently that the pieces finally came together: I have psoriatic spondyloarthritis, an autoimmune condition that had been silently attacking my joints and spine.</p>
+
+                <p>Suddenly, so much made sense. The days when simple tasks felt impossible weren't just exhaustion from caregiving—my own body was waging war against itself. The pain I'd learned to push through and hide wasn't normal. The fatigue that no amount of rest could fix was real and had a name. Like so many people with invisible disabilities, I'd become an expert at masking my symptoms, at appearing "fine" while struggling internally, at questioning whether my pain was valid enough to matter.</p>
+
+                <div class="highlight-box">
+                    <p><strong>Discovering my own diagnosis while caring for my husband gave me a unique perspective on invisible disabilities.</strong></p>
+                    <p>I understood both sides—the person who can't see the struggle and the person living it every day. I knew what it felt like to love someone with invisible challenges, and I knew what it felt like to be that person whose suffering goes unseen and unacknowledged.</p>
+                </div>
+            </div>
+
+            <div class="divider">• • •</div>
+
+            <div class="story-section">
+                <h2>The Breaking Point That Became a Beginning</h2>
+
+                <p>The 2020 pandemic brought new challenges that pushed us both to our breaking points. As the world became genuinely unsafe, my husband's fears were suddenly validated in ways that were both vindicating and terrifying. Meanwhile, I watched people online and in real life display a breathtaking lack of empathy for those who were struggling. The cruelty I witnessed toward people with disabilities, mental illness, and invisible conditions broke something open in me.</p>
+
+                <p>That's when I realized something profound: we weren't alone in feeling unseen.</p>
+
+                <p>From the time I was a little girl, I felt a quiet but persistent calling to help others. As I grew older, that calling became a drive to mend what was broken—not just in systems, but in hearts. Over time, I came to understand just how many people in my life were affected by mental illness and invisible disabilities. My journey as a caregiver opened my eyes to the silent battles being fought all around me—by friends, family members, and strangers alike.</p>
+            </div>
+
+            <div class="divider">• • •</div>
+
+            <div class="story-section">
+                <h2>Creating Understanding from Experience</h2>
+
+                <p>Through my own journey and my growing awareness of invisible disabilities, I began to understand that millions of people are living with conditions that others can't see—and therefore can't understand. People with autoimmune diseases who look healthy while their immune systems attack their own bodies. Individuals with chronic pain who smile through agony because explaining it is too exhausting. Those with mental health conditions who become experts at masking their internal battles. People with neurological differences who are misunderstood or dismissed as "difficult."</p>
+
+                <p>The phrase "you don't look sick" became a rallying cry I heard everywhere. It represents one of the most harmful misconceptions in our society—the idea that disability, illness, or suffering must be visible to be valid. This thinking dismisses the daily struggles of countless individuals who are fighting battles no one can see.</p>
+
+                <p>I realized that what we needed wasn't just awareness—we needed understanding. Real, deep understanding of what these conditions actually feel like, how they impact daily life, and why the support and accommodations people need aren't "special treatment" but basic human compassion.</p>
+
+                <div class="highlight-box">
+                    <p><strong>So I began creating Invisible Disability Spotlights—comprehensive guides that pull back the curtain on what it's really like to live with conditions that others can't see.</strong></p>
+                    <p>Each spotlight breaks down the misconceptions, explains the daily reality, and gives voice to the experiences that too often remain hidden. I wanted to create something that would help people feel less alone while educating others about the invisible struggles happening all around them.</p>
+                </div>
+            </div>
+
+            <div class="divider">• • •</div>
+
+            <div class="story-section">
+                <h2>Why This Resource Matters</h2>
+
+                <p>This comprehensive guide represents over 40 of these spotlights, covering the most common and misunderstood invisible disabilities. It's organized into categories that reflect the diverse ways these conditions impact people's lives—from autoimmune diseases and chronic pain to mental health conditions and neurological differences.</p>
+
+                <p>Whether you're living with an invisible disability yourself, caring for someone who is, or simply want to better understand the hidden struggles of those around you, this resource is for you. If you've ever felt unseen, unheard, or misunderstood, you're not alone. If you've ever wondered how to support someone whose struggles you can't see, you'll find answers here.</p>
+
+                <p>My journey from that dark place in 2020 to creating this resource has taught me that our most painful experiences can become our greatest sources of strength and purpose. The isolation I felt led me to recognize the isolation others feel with their invisible conditions. The fear and anxiety I experienced opened my heart to the fear and anxiety others carry silently every day.</p>
+            </div>
+
+            <div class="highlight-box">
+                <p style="font-size: 1.2rem; text-align: center; margin: 0;"><strong>We don't have to suffer in the shadows anymore. We don't have to pretend we're fine when we're not. We don't have to carry the additional burden of being misunderstood on top of everything else we're already facing.</strong></p>
+            </div>
+
+            <div class="story-section">
+                <p style="margin-top: 2rem;">This resource is a light in that invisible darkness—for those who are struggling and for those who love them. It's proof that our stories matter, our experiences are valid, and we are not alone.</p>
+
+                <div class="quote" style="margin-top: 2rem;">
+                    Your invisible struggle is real.<br>
+                    Your pain is valid.<br>
+                    You are seen.<br>
+                    And you are not alone.
+                </div>
+            </div>
+
+            <div class="signature">
+                <p>With love and understanding,</p>
+                <p class="name">Lori Doll</p>
+                <p style="margin-top: 0.5rem; font-style: normal; font-size: 1rem;">Caregiver, Advocate, and Fellow Traveler on This Journey</p>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <p><strong>Understanding Invisible Disabilities</strong></p>
+        <p style="margin-top: 0.5rem;">By Lori Doll | Free Resource for All</p>
+		
+		<p style="margin-top: 1rem; font-size: 0.85rem; color: #718096;">
+        <strong>Medical Disclaimer:</strong> This site provides educational information only. 
+        It is not medical advice. Always consult qualified healthcare professionals for medical concerns.
+    </p>
+	
+        <p style="margin-top: 1rem; font-size: 0.9rem;">
+            💜 Your invisible struggle is real. Your pain is valid. You are not alone. 💜
+        </p>
+    </footer>
+</body>
+</html>

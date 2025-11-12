@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invisible Disability Spotlights - Understanding Invisible Disabilities</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.7;
+            color: #2c3e50;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1.5rem 0;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #4a5568;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #667eea;
+        }
+
+        .page-hero {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+            text-align: center;
+        }
+
+        .page-hero h1 {
+            font-size: 2.5rem;
+            color: white;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .page-hero p {
+            font-size: 1.2rem;
+            color: white;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+        }
+
+        .search-box {
+            max-width: 600px;
+            margin: 2rem auto;
+            background: white;
+            padding: 1rem;
+            border-radius: 50px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            display: flex;
+            align-items: center;
+        }
+
+        .search-box input {
+            flex: 1;
+            border: none;
+            outline: none;
+            font-size: 1.1rem;
+            padding: 0.5rem 1rem;
+            color: #2c3e50;
+        }
+
+        .search-box button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 0.7rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .search-box button:hover {
+            transform: scale(1.05);
+        }
+
+        .categories-grid {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .category-card {
+            background: white;
+            border-radius: 20px;
+            padding: 2.5rem;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .category-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 70px rgba(0,0,0,0.3);
+        }
+
+        .category-icon {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .category-title {
+            font-size: 1.6rem;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+
+        .category-description {
+            color: #4a5568;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .condition-count {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .condition-list {
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 2px solid #e2e8f0;
+        }
+
+        .condition-list ul {
+            list-style: none;
+            margin-top: 1rem;
+        }
+
+        .condition-list li {
+            padding: 0.5rem 0;
+            color: #667eea;
+            font-weight: 500;
+        }
+
+        .condition-list li:before {
+            content: "→ ";
+            margin-right: 0.5rem;
+        }
+
+        .educational-section {
+            max-width: 1200px;
+            margin: 4rem auto 2rem;
+            padding: 0 2rem;
+        }
+
+        .educational-card {
+            background: white;
+            border-radius: 20px;
+            padding: 3rem;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+            margin-bottom: 2rem;
+        }
+
+        .educational-card h2 {
+            color: #667eea;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .educational-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .educational-item {
+            padding: 1.5rem;
+            background: #f7fafc;
+            border-radius: 10px;
+            border-left: 4px solid #667eea;
+        }
+
+        .educational-item h3 {
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+
+        .educational-item p {
+            color: #4a5568;
+            font-size: 0.95rem;
+        }
+
+        footer {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 2rem;
+            text-align: center;
+            margin-top: 4rem;
+            color: #4a5568;
+        }
+
+        @media (max-width: 768px) {
+            .page-hero h1 {
+                font-size: 2rem;
+            }
+
+            .categories-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .category-card {
+                padding: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Understanding Invisible Disabilities</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+				<li><a href="educational.html">Learn</a></li> 
+                <li><a href="conditions.html">Conditions</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-hero">
+            <h1>🔍 Invisible Disability Spotlights</h1>
+            <p>Comprehensive guides to over 40 invisible disabilities. Each spotlight explains what the condition is, why it's invisible, daily realities, common misconceptions, and how you can help.</p>
+            
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Search for a condition..." onkeyup="searchConditions()">
+                <button onclick="searchConditions()">Search</button>
+            </div>
+        </section>
+
+        <section class="educational-section">
+            <div class="educational-card">
+                <h2>📚 Start Here: Educational Foundations</h2>
+                <p style="color: #4a5568; margin-bottom: 1rem;">Before exploring specific conditions, these foundational concepts will help you better understand invisible disabilities.</p>
+                
+                <div class="educational-grid">
+                    <div class="educational-item">
+                        <h3>🥄 The Spoon Theory</h3>
+                        <p>Understanding limited daily energy and how chronic illness affects every decision.</p>
+                    </div>
+                    <div class="educational-item">
+                        <h3>👁️ Invisible vs. Visible</h3>
+                        <p>Why both matter equally and how to support the full spectrum of disability.</p>
+                    </div>
+                    <div class="educational-item">
+                        <h3>🏥 Navigating Healthcare</h3>
+                        <p>Tips for getting believed and properly treated with invisible conditions.</p>
+                    </div>
+                    <div class="educational-item">
+                        <h3>💪 Self-Advocacy</h3>
+                        <p>Essential skills for speaking up about your invisible disability needs.</p>
+                    </div>
+                    <div class="educational-item">
+                        <h3>🤝 Supporting Someone</h3>
+                        <p>How to be there for loved ones with invisible disabilities.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="categories-grid">
+            <div class="category-card" onclick="window.location.href='autoimmune.html'">
+                <span class="category-icon">🦠</span>
+                <h2 class="category-title">Autoimmune & Chronic Illness</h2>
+                <p class="category-description">Conditions where the immune system attacks the body, causing widespread inflammation and symptoms.</p>
+                <span class="condition-count">10 Conditions</span>
+                <div class="condition-list">
+                    <ul>
+                        <li>Lupus</li>
+                        <li>Rheumatoid Arthritis</li>
+                        <li>Psoriatic Spondyloarthritis</li>
+                        <li>Multiple Sclerosis</li>
+                        <li>Type 1 Diabetes</li>
+                        <li>Hashimoto's Thyroiditis</li>
+                        <li>Celiac Disease</li>
+                        <li>Crohn's & Ulcerative Colitis</li>
+                        <li>Tick-borne Illnesses</li>
+                        <li>IBS</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="category-card" onclick="window.location.href='pain-fatigue.html'">
+                <span class="category-icon">⚡</span>
+                <h2 class="category-title">Pain & Fatigue Conditions</h2>
+                <p class="category-description">Chronic pain and exhaustion conditions that significantly impact daily functioning.</p>
+                <span class="condition-count">8 Conditions</span>
+                <div class="condition-list">
+                    <ul>
+                        <li>Fibromyalgia</li>
+                        <li>Ehlers-Danlos Syndrome</li>
+                        <li>Chronic Fatigue Syndrome (ME/CFS)</li>
+                        <li>Endometriosis</li>
+                        <li>Interstitial Cystitis</li>
+                        <li>Raynaud's Disease</li>
+                        <li>Scoliosis</li>
+                        <li>Chronic Pain</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="category-card" onclick="window.location.href='mental-health.html'">
+                <span class="category-icon">🧠</span>
+                <h2 class="category-title">Mental Health Conditions</h2>
+                <p class="category-description">Mental health disorders that affect thoughts, emotions, and behaviors in profound ways.</p>
+                <span class="condition-count">12 Conditions</span>
+                <div class="condition-list">
+                    <ul>
+                        <li>Depression</li>
+                        <li>Anxiety Disorders</li>
+                        <li>Bipolar Disorder</li>
+                        <li>PTSD</li>
+                        <li>OCD</li>
+                        <li>Panic Disorder</li>
+                        <li>Social Anxiety</li>
+                        <li>Agoraphobia</li>
+                        <li>Borderline Personality Disorder</li>
+                        <li>Eating Disorders</li>
+                        <li>Schizophrenia & Schizoaffective</li>
+                        <li>Dissociative Disorders</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="category-card" onclick="window.location.href='neurological.html'">
+                <span class="category-icon">🔬</span>
+                <h2 class="category-title">Neurological & Cognitive</h2>
+                <p class="category-description">Brain and nervous system conditions affecting cognition, movement, and sensory processing.</p>
+                <span class="condition-count">12 Conditions</span>
+                <div class="condition-list">
+                    <ul>
+                        <li>ADHD</li>
+                        <li>Autism Spectrum Disorder</li>
+                        <li>Traumatic Brain Injury</li>
+                        <li>Tourette's Syndrome</li>
+                        <li>Epilepsy</li>
+                        <li>Migraine & Chronic Headaches</li>
+                        <li>POTS</li>
+                        <li>Arachnoiditis</li>
+                        <li>Functional Neurological Disorder</li>
+                        <li>Sleep Disorders</li>
+                        <li>Neuropathy</li>
+                        <li>BIND</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="category-card" onclick="window.location.href='sensory.html'">
+                <span class="category-icon">👂</span>
+                <h2 class="category-title">Sensory Disabilities</h2>
+                <p class="category-description">Conditions affecting hearing, vision, and sensory processing that aren't always obvious.</p>
+                <span class="condition-count">3 Conditions</span>
+                <div class="condition-list">
+                    <ul>
+                        <li>Hearing Loss & Deafness</li>
+                        <li>Vision Impairment & Blindness</li>
+                        <li>Sensory Processing Disorder</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="category-card" onclick="window.location.href='special-topics.html'">
+                <span class="category-icon">💜</span>
+                <h2 class="category-title">Special Topics</h2>
+                <p class="category-description">Important experiences and intersections related to invisible disabilities.</p>
+                <span class="condition-count">4 Topics</span>
+                <div class="condition-list">
+                    <ul>
+                        <li>Perimenopause</li>
+                        <li>Living with Mitrofanoff Stoma</li>
+                        <li>Multiple Chronic Conditions</li>
+                        <li>Chronic Illness & Mental Health</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p><strong>Understanding Invisible Disabilities</strong></p>
+        <p style="margin-top: 0.5rem;">By Lori Doll | Free Resource for All</p>
+        <p style="margin-top: 1rem; font-size: 0.9rem;">
+            💜 Your invisible struggle is real. Your pain is valid. You are not alone. 💜
+        </p>
+    </footer>
+
+    <script>
+        function searchConditions() {
+            const input = document.getElementById('searchInput').value.toLowerCase();
+            if (input.length > 0) {
+                alert('Search functionality will help you find: "' + input + '"\n\nThis feature will be fully functional in the complete website!');
+            }
+        }
+    </script>
+</body>
+</html>

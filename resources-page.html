@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources - Understanding Invisible Disabilities</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.7; color: #2c3e50; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+        header { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); padding: 1.5rem 0; box-shadow: 0 2px 20px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
+        nav { max-width: 1400px; margin: 0 auto; padding: 0 2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
+        .logo { font-size: 1.5rem; font-weight: bold; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .nav-links { display: flex; gap: 2rem; list-style: none; flex-wrap: wrap; }
+        .nav-links a { text-decoration: none; color: #4a5568; font-weight: 500; transition: color 0.3s; }
+        .nav-links a:hover { color: #667eea; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 2rem; }
+        .page-hero { text-align: center; margin-bottom: 3rem; }
+        .page-hero h1 { font-size: 2.5rem; color: white; margin-bottom: 1rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.2); }
+        .page-hero p { font-size: 1.2rem; color: white; max-width: 800px; margin: 0 auto; }
+        .search-box { max-width: 600px; margin: 2rem auto; background: white; padding: 1rem; border-radius: 50px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); display: flex; align-items: center; }
+        .search-box input { flex: 1; border: none; outline: none; font-size: 1rem; padding: 0.5rem 1rem; }
+        .resource-categories { display: grid; gap: 2rem; }
+        .resource-section { background: white; padding: 2.5rem; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
+        .resource-section h2 { color: #667eea; font-size: 1.8rem; margin-bottom: 1.5rem; padding-bottom: 0.5rem; border-bottom: 3px solid #667eea; }
+        .resource-category { margin-bottom: 2rem; }
+        .resource-category:last-child { margin-bottom: 0; }
+        .resource-category h3 { color: #2c3e50; font-size: 1.3rem; margin-bottom: 1rem; }
+        .resource-item { background: #f7fafc; padding: 1.2rem; border-radius: 10px; margin-bottom: 1rem; border-left: 4px solid #667eea; transition: transform 0.2s, box-shadow 0.2s; }
+        .resource-item:hover { transform: translateX(5px); box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        .resource-item h4 { color: #667eea; margin-bottom: 0.5rem; font-size: 1.1rem; }
+        .resource-item a { color: #667eea; text-decoration: none; font-weight: 600; }
+        .resource-item a:hover { text-decoration: underline; }
+        .resource-item p { color: #4a5568; font-size: 0.95rem; margin-top: 0.5rem; }
+        .crisis-box { background: linear-gradient(135deg, #fc8181 0%, #f56565 100%); color: white; padding: 2rem; border-radius: 15px; margin: 2rem 0; box-shadow: 0 10px 30px rgba(252, 129, 129, 0.3); }
+        .crisis-box h3 { font-size: 1.5rem; margin-bottom: 1rem; }
+        .crisis-box .crisis-number { font-size: 2rem; font-weight: bold; margin: 1rem 0; }
+        .crisis-box p { margin-bottom: 0.5rem; }
+        footer { background: rgba(255, 255, 255, 0.95); padding: 2rem; text-align: center; margin-top: 3rem; color: #4a5568; }
+        @media (max-width: 768px) { .page-hero h1 { font-size: 2rem; } .resource-section { padding: 2rem 1.5rem; } }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Understanding Invisible Disabilities</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+				<li><a href="educational.html">Learn</a></li> 
+                <li><a href="conditions.html">Conditions</a></li>
+                <li><a href="resources.html">Resources</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section class="page-hero">
+            <h1>📚 Resources for Invisible Disabilities</h1>
+            <p>Comprehensive organizations, support groups, financial assistance programs, and tools to help you navigate life with invisible disabilities.</p>
+        </section>
+
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Search resources..." onkeyup="searchResources()">
+        </div>
+
+        <div class="crisis-box">
+            <h3>🚨 Crisis Resources - Available 24/7</h3>
+            <div class="crisis-number">988</div>
+            <p><strong>National Suicide Prevention Lifeline</strong></p>
+            <p>Call or text 988 for free, confidential crisis support 24/7</p>
+            <p style="margin-top: 1rem;"><strong>Crisis Text Line:</strong> Text HOME to 741741</p>
+            <p><strong>SAMHSA National Helpline:</strong> 1-800-662-4357 (treatment referral)</p>
+        </div>
+
+        <div class="resource-categories">
+            
+            <!-- General Organizations -->
+            <div class="resource-section">
+                <h2>🌟 General Invisible Disability Organizations</h2>
+                
+                <div class="resource-item">
+                    <h4>Invisible Disabilities Association (IDA)</h4>
+                    <a href="https://invisibledisabilities.org" target="_blank">invisibledisabilities.org</a>
+                    <p>Comprehensive resource for education, support, and advocacy. Annual awards program recognizing invisible disability advocates.</p>
+                </div>
+
+                <div class="resource-item">
+                    <h4>National Organization for Rare Disorders (NORD)</h4>
+                    <a href="https://rarediseases.org" target="_blank">rarediseases.org</a>
+                    <p>Resources for rare and orphan diseases. Patient assistance programs and advocacy.</p>
+                </div>
+
+                <div class="resource-item">
+                    <h4>Disability Rights Education & Defense Fund (DREDF)</h4>
+                    <a href="https://dredf.org" target="_blank">dredf.org</a>
+                    <p>Legal advocacy and disability rights information. Resources on ADA compliance and accommodations.</p>
+                </div>
+
+                <div class="resource-item">
+                    <h4>United Spinal Association</h4>
+                    <a href="https://unitedspinal.org" target="_blank">unitedspinal.org</a>
+                    <p>Resources for various disabilities, not just spinal conditions. Advocacy and support services.</p>
+                </div>
+            </div>
+
+            <!-- Autoimmune & Chronic Illness -->
+            <div class="resource-section">
+                <h2>🦠 Autoimmune & Chronic Illness</h2>
+                
+                <div class="resource-item">
+                    <h4>American Autoimmune Related Diseases Association (AARDA)</h4>
+                    <a href="https://aarda.org" target="_blank">aarda.org</a>
+                    <p>Education and advocacy for autoimmune conditions.</p>
+                </div>
+
+                <div class="resource-item">
+                    <h4>Lupus Foundation of America</h4>
+                    <a href="https://lupus.org" target="_blank">lupus.org</a>
+                    <p>Support groups, educational resources, research updates.</p>
+                </div>
+
+                <div class="resource-item">
+                    <h4>Rheumatoid Arthritis Support Network</h4>
+                    <a href="https://rasn.org" target="_blank">rasn.org</a>
+                    <p>Patient-centered resources and community support.</p>
+                </div>
+
+                <div class="resource-item">
+                    <h4>Crohn's & Colitis Foundation</h4>
+                    <a href="https://crohnscolitisfoundation.org" target="_blank">crohnscolitisfoundation.org</a>
+                    <p>Support groups, educational materials, research funding.</p>
+                </div>
+
+                <div class="resource-item">
+                    <h4>Beyond Type 1 & JDRF</h4>
+                    <a href="https://beyondtype1.org" target="_blank">beyondtype1.org</a> | <a href="https://jdrf.org" target="_blank">jdrf.org</a>
+                    <p>Type 1 diabetes support, advocacy, and research.</p>
+                </div>
+            </div>
+
+            <!-- Mental Health -->
+            <div class="resource-section">
+                <h2>🧠 Mental Health Resources</h2>
+                
+                <div class="resource-item">
+                    <h4>National Alliance on Mental Illness (NAMI)</h4>
+                    <a href="https://nami.org" target="_blank">nami.org</a>
+                    <p>Support groups, educational programs, advocacy. 24/7 helpline: 1-800-950-NAMI (6264)</p>
+                </div>
+
+                <div class="resource-item">
+                    <h4>Anxiety and Depression Association of America (ADAA)</h4>
+                    <a href="https://adaa.org" target="_blank">adaa.org</a>
+                    <p>Treatment information, support groups, therapist directory.</p>
+                </div>
+
+                <div class="resource-item">
+                    <h4>International OCD Foundation</h4>
+                    <a href="https://iocdf.org" target="_blank">iocdf.org</a>
+                    <p>Specialized resources for OCD and related disorders.</p>
+                </div>
+
+                <div class="resource-item">
+                    <h4>National Eating Disorders Association (NEDA)</h4>
+                    <a href="https://nationaleatingdisorders.org" target="_blank">nationaleatingdisorders.org</a>
+                    <p>Support, treatment resources, and helpline.</p>
+                </div>
+
+                <div class="resource-item">
+                    <h4>Depression and Bipolar Support Alliance (DBSA)</h4>
+                    <a href="https://dbsalliance.org" target="_blank">dbsalliance.org</a>
+                    <p>Peer support groups and educational resources.</p>
+                </div>
+            </div>
+
+            <!-- Pain & Fatigue -->
+            <div class="resource-section">
+                <h2>⚡ Pain & Fatigue Conditions</h2>
+                
+                <div class="resource-item">
+                    <h4>American Chronic Pain Association</h4>
+                    <a href="https://theacpa.org" target="_blank">theacpa.org</a>
+                    <p>Self-management resources and support groups.</p>
+                </div>
+
+                <div class="resource-item">
+                    <h4>National Fibromyalgia & Chronic Pain Association</h4>
+                    <a href="https://fmcpaware.org" target="_blank">fmcpaware.org</a>
+                    <p>Educational resources and support networks.</p>
+                </div>
+
+                <div class="resource-item">
+                    <h4>MEAction (ME/CFS)</h4>
+                    <a href="https://meaction.net" target="_blank">meaction.net</a>
+                    <p>Advocacy and support for ME/CFS patients.</p>
+                </div>
+
+                <div class="resource-item">
+                    <h4>The Ehlers-Danlos Society</h4>
+                    <a href="https://ehlers-danlos.com" target="_blank">ehlers-danlos.com</a>
+                    <p>Medical information, support groups, physician directory.</p>
+                </div>
+
+                <div class="resource-item">
+                    <h4>Endometriosis Foundation of America</h4>
+                    <a href="https://endofound.org" target="_blank">endofound.org</a>
+                    <p>Education, support, and advocacy for endometriosis.</p>
+                </div>
+            </div>
+
+            <!-- Neurological -->
+            <div class="resource-section">
+                <h2>🔬 Neurological Conditions</h2>
+                
+                <div class="resource-item">
+                    <h4>Epilepsy Foundation</h4>
+                    <a href="https://epilepsy.com" target="_blank">epilepsy.com</a>
+                    <p>Support, education, and advocacy resources.</p>
+                </div>
+
+                <div class="resource-item">
+                    <h4>Tourette Association of America</h4>
+                    <a href="https://tourette.org" target="_blank">tourette.org</a>
+                    <p>Support groups, educational materials, camps for youth.</p>
+                </div>
+
+                <div class="resource-item">
+                    <h4>Migraine Research Foundation</h4>
+                    <a href="https://migraineresearchfoundation.org" target="_blank">migraineresearchfoundation.org</a>
+                    <p>Research updates and patient resources.</p>
+                </div>
+
+                <div class="resource-item">
+                    <h4>ADHD & You</h4>
+                    <a href="https://adhdandyou.com" target="_blank">adhdandyou.com</a>
+                    <p>Adult ADHD resources and tools.</p>
+                </div>
+            </div>
+
+            <!-- Support Platforms -->
+            <div class="resource-section">
+                <h2>💬 Support & Community Platforms</h2>
+                
+                <div class="resource-item">
+                    <h4>The Mighty</h4>
+                    <a href="https://themighty.com" target="_blank">themighty.com</a>
+                    <p>Community platform for people with disabilities and health conditions. Personal stories, support groups, and resources.</p>
+                </div>
+
+                <div class="resource-item">
+                    <h4>PatientsLikeMe</h4>
+                    <a href="https://patientslikeme.com" target="_blank">patientslikeme.com</a>
+                    <p>Health data sharing platform and community.</p>
+                </div>
+
+                <div class="resource-item">
+                    <h4>HealthUnlocked</h4>
+                    <a href="https://healthunlocked.com" target="_blank">healthunlocked.com</a>
+                    <p>Condition-specific online communities and support groups.</p>
+                </div>
+
+                <div class="resource-item">
+                    <h4>7 Cups</h4>
+                    <a href="https://7cups.com" target="_blank">7cups.com</a>
+                    <p>Free emotional support and online therapy options.</p>
+                </div>
+            </div>
+
+            <!-- Financial Assistance -->
+            <div class="resource-section">
+                <h2>💰 Financial Assistance & Benefits</h2>
+                
+                <div class="resource-item">
+                    <h4>GoodRx</h4>
+                    <a href="https://goodrx.com" target="_blank">goodrx.com</a>
+                    <p>Prescription discount programs and price comparisons.</p>
+                </div>
+
+                <div class="resource-item">
+                    <h4>NeedyMeds</h4>
+                    <a href="https://needymeds.org" target="_blank">needymeds.org</a>
+                    <p>Patient assistance programs for medications and healthcare costs.</p>
+                </div>
+
+                <div class="resource-item">
+                    <h4>Partnership for Prescription Assistance</h4>
+                    <a href="https://pparx.org" target="_blank">pparx.org</a>
+                    <p>Helps connect patients with prescription assistance programs.</p>
+                </div>
+
+                <div class="resource-item">
+                    <h4>Patient Advocate Foundation</h4>
+                    <a href="https://patientadvocate.org" target="_blank">patientadvocate.org</a>
+                    <p>Help with insurance, financial, and employment issues related to chronic illness.</p>
+                </div>
+
+                <div class="resource-item">
+                    <h4>Benefits.gov</h4>
+                    <a href="https://benefits.gov" target="_blank">benefits.gov</a>
+                    <p>Find government assistance programs you may qualify for.</p>
+                </div>
+
+                <div class="resource-item">
+                    <h4>211 (Dial 2-1-1)</h4>
+                    <p>Connects you to local resources for basic needs. Available 24/7 in most areas.</p>
+                </div>
+
+                <div class="resource-item">
+                    <h4>Social Security Administration - Disability Benefits</h4>
+                    <a href="https://ssa.gov/disability" target="_blank">ssa.gov/disability</a>
+                    <p>Information about SSDI and SSI benefits.</p>
+                </div>
+            </div>
+
+            <!-- Legal & Advocacy -->
+            <div class="resource-section">
+                <h2>⚖️ Legal & Advocacy Resources</h2>
+                
+                <div class="resource-item">
+                    <h4>Job Accommodation Network (JAN)</h4>
+                    <a href="https://askjan.org" target="_blank">askjan.org</a>
+                    <p>Free consultation on workplace accommodations. Phone: 1-800-526-7234</p>
+                </div>
+
+                <div class="resource-item">
+                    <h4>Equal Employment Opportunity Commission (EEOC)</h4>
+                    <a href="https://eeoc.gov" target="_blank">eeoc.gov</a>
+                    <p>Information about disability discrimination and ADA rights.</p>
+                </div>
+
+                <div class="resource-item">
+                    <h4>Disability.gov</h4>
+                    <a href="https://disability.gov" target="_blank">disability.gov</a>
+                    <p>Government resources and benefits information.</p>
+                </div>
+            </div>
+
+            <!-- Accessibility -->
+            <div class="resource-section">
+                <h2>♿ Accessibility & Assistive Technology</h2>
+                
+                <div class="resource-item">
+                    <h4>Assistive Technology Industry Association (ATIA)</h4>
+                    <a href="https://atia.org" target="_blank">atia.org</a>
+                    <p>Information about assistive technology solutions.</p>
+                </div>
+
+                <div class="resource-item">
+                    <h4>American Foundation for the Blind</h4>
+                    <a href="https://afb.org" target="_blank">afb.org</a>
+                    <p>Resources for vision loss and blindness.</p>
+                </div>
+
+                <div class="resource-item">
+                    <h4>National Institute on Deafness and Other Communication Disorders</h4>
+                    <a href="https://nidcd.nih.gov" target="_blank">nidcd.nih.gov</a>
+                    <p>Resources for hearing and communication disabilities.</p>
+                </div>
+            </div>
+
+            <!-- Educational -->
+            <div class="resource-section">
+                <h2>📖 Educational Resources</h2>
+                
+                <div class="resource-item">
+                    <h4>Spoon Theory (Original Article)</h4>
+                    <a href="https://butyoudontlooksick.com" target="_blank">butyoudontlooksick.com</a>
+                    <p>Christine Miserandino's original "Spoon Theory" explanation.</p>
+                </div>
+
+                <div class="resource-item">
+                    <h4>Invisible Illness Week</h4>
+                    <a href="https://invisibleillnessweek.com" target="_blank">invisibleillnessweek.com</a>
+                    <p>Annual awareness campaign and educational resources.</p>
+                </div>
+
+                <div class="resource-item">
+                    <h4>ChronicBabe</h4>
+                    <a href="https://chronicbabe.com" target="_blank">chronicbabe.com</a>
+                    <p>Lifestyle and wellness resources for young women with chronic illness.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div style="background: white; padding: 2rem; border-radius: 15px; margin-top: 2rem; text-align: center;">
+            <h3 style="color: #667eea; margin-bottom: 1rem;">💜 Remember</h3>
+            <p style="color: #4a5568; line-height: 1.8;">
+                You don't have to navigate invisible disabilities alone. These resources exist to support you, 
+                validate your experience, and help you live your fullest life possible. Your struggles are real, 
+                your needs are legitimate, and support is available.
+            </p>
+        </div>
+    </div>
+
+    <footer>
+        <p><strong>Understanding Invisible Disabilities</strong></p>
+        <p style="margin-top: 0.5rem;">By Lori Doll | Free Resource for All</p>
+        <p style="margin-top: 1rem; font-size: 0.85rem; color: #718096;">
+            <strong>Medical Disclaimer:</strong> This site provides educational information only. 
+            It is not medical advice. Always consult qualified healthcare professionals for medical concerns.
+        </p>
+        <p style="margin-top: 1rem; font-size: 0.9rem;">
+            💜 Your invisible struggle is real. Your pain is valid. You are not alone. 💜
+        </p>
+    </footer>
+
+    <script>
+        function searchResources() {
+            const input = document.getElementById('searchInput').value.toLowerCase();
+            const items = document.querySelectorAll('.resource-item');
+            
+            items.forEach(item => {
+                const text = item.textContent.toLowerCase();
+                if (text.includes(input)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
