@@ -582,6 +582,59 @@
   color: #667eea; /* highlight the 💙 Remember label */
 }
 
+/* Social Sharing Section */
+.social-sharing {
+  background: #f9f9f9;
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.social-sharing h3 {
+  margin-bottom: 0.5rem;
+  color: #4a5568;
+}
+
+.share-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.share-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: #fff;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.share-btn span {
+  font-size: 1.2rem;
+}
+
+/* Platform Colors */
+.share-btn.facebook { background: #3b5998; }
+.share-btn.twitter { background: #1da1f2; }
+.share-btn.linkedin { background: #0077b5; }
+.share-btn.email { background: #6c757d; }
+.share-btn.copy-link { background: #4a5568; }
+
+/* Hover Effects */
+.share-btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+
 
 	</style>
 </head>
@@ -703,25 +756,38 @@
         <strong>Note:</strong> This information is educational only, not medical advice. Always consult healthcare professionals for diagnosis and treatment.
     </div>
 </div>
-<!-- Social Sharing - Top -->
+<!-- Social Sharing -->
 <div class="social-sharing">
     <h3>💜 Help Spread Awareness</h3>
     <p>Share this resource to help others understand invisible disabilities. #BeKind</p>
     <div class="share-buttons">
-        <a href="https://www.facebook.com/sharer/sharer.php?u=YOUR_URL_HERE" target="_blank" class="share-btn facebook">
-            <span>📘</span> Share on Facebook
-        </a>
-        <a href="https://twitter.com/intent/tweet?url=YOUR_URL_HERE&text=Understanding%20Invisible%20Disabilities%20-%20A%20comprehensive%20guide%20%23BeKind" target="_blank" class="share-btn twitter">
-            <span>🐦</span> Share on Twitter
-        </a>
-        <a href="https://www.linkedin.com/sharing/share-offsite/?url=YOUR_URL_HERE" target="_blank" class="share-btn linkedin">
-            <span>💼</span> Share on LinkedIn
-        </a>
-        <button onclick="copyLink()" class="share-btn copy-link">
-            <span>🔗</span> Copy Link
-        </button>
+        <!-- Facebook -->
+<a href="https://www.facebook.com/sharer/sharer.php?u=https://loridoll.com/conditions.html" 
+   target="_blank" class="share-btn facebook" aria-label="Share on Facebook">
+    <span>📘</span> Share on Facebook
+</a>
+
+<!-- Twitter -->
+<a href="https://twitter.com/intent/tweet?url=https://loridoll.com/conditions.html&text=Understanding%20Invisible%20Disabilities%20-%20A%20comprehensive%20guide%20%23BeKind" 
+   target="_blank" class="share-btn twitter" aria-label="Share on Twitter">
+    <span>🐦</span> Share on Twitter
+</a>
+
+<!-- LinkedIn -->
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https://loridoll.com/conditions.html" 
+   target="_blank" class="share-btn linkedin" aria-label="Share on LinkedIn">
+    <span>💼</span> Share on LinkedIn
+</a>
+
+<!-- Email -->
+<a href="mailto:?subject=Understanding Invisible Disabilities&body=I thought you might find this helpful! Learn more here: https://loridoll.com/conditions.html" 
+   class="share-btn email" aria-label="Share via Email">
+    <span>✉️</span> Share via Email
+</a>
+
     </div>
 </div>
+
 <div style="background: #fff3cd; padding: 1rem; border-radius: 10px; margin-top: 1rem; font-size: 0.9rem; color: #856404;">
     <strong>Note:</strong> This information is educational only, not medical advice. Always consult healthcare professionals for diagnosis and treatment.
 </div>
