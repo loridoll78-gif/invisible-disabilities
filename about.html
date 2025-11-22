@@ -65,6 +65,13 @@
         .nav-links a:hover {
             color: #667eea;
         }
+		
+		.nav-links a.active {
+  color: #667eea; /* purple highlight */
+  font-weight: 600;
+}
+
+
 
         .about-hero {
             max-width: 900px;
@@ -325,18 +332,27 @@
         </article>
     </main>
 
-    <footer>
-        <p><strong>Understanding Invisible Disabilities</strong></p>
-        <p style="margin-top: 0.5rem;">By Lori Doll | Free Resource for All</p>
-		
-		<p style="margin-top: 1rem; font-size: 0.85rem; color: #718096;">
-        <strong>Medical Disclaimer:</strong> This site provides educational information only. 
-        It is not medical advice. Always consult qualified healthcare professionals for medical concerns.
-    </p>
-	
-        <p style="margin-top: 1rem; font-size: 0.9rem;">
-            💜 Your invisible struggle is real. Your pain is valid. You are not alone. 💜
-        </p>
-    </footer>
+    <div class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑</div>
+
+<footer>
+  <p><strong>Understanding Invisible Disabilities</strong></p>
+  <p style="margin-top: 0.5rem;">By Lori Doll | Free Resource for All</p>
+  <p style="margin-top: 1rem; font-size: 0.85rem; color: #718096;">
+    <strong>Medical Disclaimer:</strong> This site provides educational information only. 
+    It is not medical advice. Always consult qualified healthcare professionals for medical concerns.
+  </p>
+  <p style="margin-top: 1rem; font-size: 0.9rem;">
+    💜 Your invisible struggle is real. Your pain is valid. You are not alone. 💜
+  </p>
+</footer>
+
+<script>
+  function scrollToTop() {
+    window.scrollTo({top: 0, behavior: 'smooth'});
+  }
+</script>
+</body>
+</html>
+
 </body>
 </html>
