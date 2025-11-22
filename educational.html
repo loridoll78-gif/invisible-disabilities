@@ -154,6 +154,45 @@
   color: #667eea; /* highlight the 💙 Remember label */
 }
 
+/* Table of Contents */
+.toc-box {
+  background: #f7fafc;
+  padding: 2rem;
+  border-radius: 15px;
+  margin: 2rem 0;
+  border-left: 4px solid #667eea;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.toc-box h3 {
+  color: #667eea;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.toc-box ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+.toc-box li {
+  margin: 0.5rem 0;
+}
+
+.toc-box a {
+  color: #4a5568;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.toc-box a:hover {
+  color: #667eea;
+  text-decoration: underline;
+}
+
+
 
 	</style>
 </head>
@@ -173,6 +212,18 @@
 
     <div <div class="container">
   <section class="page-hero">
+  <div class="toc-box">
+  <h3>📖 Table of Contents</h3>
+  <ul>
+    <li><a href="#spoon-theory">🥄 The Spoon Theory Explained</a></li>
+    <li><a href="#invisible-vs-visible">👁️ Understanding Disability: The Full Spectrum</a></li>
+    <li><a href="#healthcare">🏥 Navigating Healthcare with Invisible Disabilities</a></li>
+    <li><a href="#self-advocacy">💪 Self-Advocacy Tips for Invisible Conditions</a></li>
+    <li><a href="#remember">💙 Remember</a></li>
+    <li><a href="#cta">📖 Continue Learning</a></li>
+  </ul>
+</div>
+
     <h1>📚 Educational Foundations</h1>
     <p>Essential concepts for understanding invisible disabilities</p>
   </section>
@@ -479,7 +530,7 @@
       <li>Help educate mutual friends and family.</li>
     </ul>
 
-   <div class="remember-box">
+  <div id="remember" class="remember-box">
   <p><strong>💙 Remember:</strong></p>
   <p>You don’t have to understand everything about their condition to be supportive. 
      What matters most is believing them, respecting their experience, and showing up 
@@ -487,7 +538,9 @@
 </div>
 
 
-<div class="cta-box">
+
+
+<div id="cta" class="cta-box">
   <h3>📖 Continue Learning</h3>
   <p>Now that you’ve explored the foundations, take the next step into specific conditions 
      and supportive resources.</p>
@@ -496,6 +549,8 @@
     <a href="resources.html" class="secondary">Browse Resources</a>
   </div>
 </div>
+
+
 
 
 
